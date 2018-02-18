@@ -1,0 +1,99 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BUFF_SIZE	includes/libft.h	/^# define BUFF_SIZE /;"	d
+CC	Makefile	/^CC=gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS= -Wall -Wextra -Werror$/;"	m
+FILES	Makefile	/^FILES=ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_isspace.c ft_iswhitespace.c ft_itoa.c ft_lstadd.c ft_lstaddb.c ft_lstdel.c ft_lstdelnode.c ft_lstdelone.c ft_lstiter.c ft_lstmap.c ft_lstnew.c ft_lstpushb.c ft_lstpushf.c ft_lsttostr.c ft_memalloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memdel.c ft_memdup.c ft_memmove.c ft_memset.c ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c ft_putnbr.c ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c ft_realloc.c ft_strcat.c ft_strchr.c ft_strclr.c ft_strcmp.c ft_strcpy.c ft_strdel.c ft_strdup.c ft_strequ.c ft_striter.c ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlen.c ft_strmap.c ft_strmapi.c ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strnequ.c ft_strnew.c ft_strnstr.c ft_strrchr.c ft_strsplit.c ft_strsrch.c ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c get_next_line.c$/;"	m
+IDIR	Makefile	/^IDIR=includes\/$/;"	m
+LIBFT_H	includes/libft.h	/^# define LIBFT_H$/;"	d
+NAME	Makefile	/^NAME=libft.a$/;"	m
+OBJS	Makefile	/^OBJS = $(FILES:.c=.o)$/;"	m
+ODIR	Makefile	/^ODIR=objs\/$/;"	m
+SDIR	Makefile	/^SDIR=srcs\/$/;"	m
+content	includes/libft.h	/^	void			*content;$/;"	m	struct:s_list
+content_size	includes/libft.h	/^	size_t			content_size;$/;"	m	struct:s_list
+count	srcs/ft_itoa.c	/^static unsigned long	count(int n)$/;"	f	language:C	file:
+f	main.c	/^void	f(t_list *l)$/;"	f	language:C
+f	srcs/ft_strsplit.c	/^static void	f(char ***arr, size_t i)$/;"	f	language:C	file:
+fill	srcs/ft_strsplit.c	/^static char	**fill(char const *s, char c, size_t am, char **rez)$/;"	f	language:C	file:
+fill_rest	libft/srcs/get_next_line.c	/^static int		fill_rest(t_list *cur, char **line)$/;"	f	file:
+ft_atoi	srcs/ft_atoi.c	/^int	ft_atoi(const char *s)$/;"	f	language:C
+ft_bzero	srcs/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f	language:C
+ft_isalnum	srcs/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f	language:C
+ft_isalpha	srcs/ft_isalpha.c	/^int	ft_isalpha(int c)$/;"	f	language:C
+ft_isascii	srcs/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f	language:C
+ft_isdigit	srcs/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f	language:C
+ft_isprint	srcs/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f	language:C
+ft_isspace	srcs/ft_isspace.c	/^int	ft_isspace(int c)$/;"	f	language:C
+ft_iswhitespace	srcs/ft_iswhitespace.c	/^int	ft_iswhitespace(int c)$/;"	f	language:C
+ft_itoa	srcs/ft_itoa.c	/^char					*ft_itoa(int n)$/;"	f	language:C
+ft_lstadd	srcs/ft_lstadd.c	/^void	ft_lstadd(t_list **alst, t_list *elem)$/;"	f	language:C
+ft_lstaddb	srcs/ft_lstaddb.c	/^void	ft_lstaddb(t_list **head, t_list *list)$/;"	f	language:C
+ft_lstdel	srcs/ft_lstdel.c	/^void	ft_lstdel(t_list **alst, void (*del)(void *))$/;"	f	language:C
+ft_lstdelnode	srcs/ft_lstdelnode.c	/^void		ft_lstdelnode(t_list **head, t_list *targ)$/;"	f	language:C
+ft_lstdelone	srcs/ft_lstdelone.c	/^void	ft_lstdelone(t_list **aslt, void (*del)(void *))$/;"	f	language:C
+ft_lstiter	srcs/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))$/;"	f	language:C
+ft_lstmap	srcs/ft_lstmap.c	/^t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))$/;"	f	language:C
+ft_lstnew	srcs/ft_lstnew.c	/^t_list	*ft_lstnew(void const *content, size_t content_size)$/;"	f	language:C
+ft_lstpushb	srcs/ft_lstpushb.c	/^void	ft_lstpushb(t_list **list, void *content, size_t content_size)$/;"	f	language:C
+ft_lstpushf	srcs/ft_lstpushf.c	/^void	ft_lstpushf(t_list **alst, void *content, size_t content_size)$/;"	f	language:C
+ft_lsttostr	srcs/ft_lsttostr.c	/^char	*ft_lsttostr(t_list *head)$/;"	f	language:C
+ft_memalloc	srcs/ft_memalloc.c	/^void	*ft_memalloc(size_t size)$/;"	f	language:C
+ft_memccpy	srcs/ft_memccpy.c	/^void	*ft_memccpy(void *s1, void const *s2, int c, size_t n)$/;"	f	language:C
+ft_memchr	srcs/ft_memchr.c	/^void	*ft_memchr(const void *str, int c, size_t n)$/;"	f	language:C
+ft_memcmp	srcs/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size_t n)$/;"	f	language:C
+ft_memcpy	srcs/ft_memcpy.c	/^void	*ft_memcpy(void *str1, const void *str2, size_t n)$/;"	f	language:C
+ft_memdel	srcs/ft_memdel.c	/^void	ft_memdel(void **ap)$/;"	f	language:C
+ft_memdup	srcs/ft_memdup.c	/^void	*ft_memdup(void *src, size_t size)$/;"	f	language:C
+ft_memmove	srcs/ft_memmove.c	/^void	*ft_memmove(void *s1, const void *s2, size_t n)$/;"	f	language:C
+ft_memset	srcs/ft_memset.c	/^void	*ft_memset(void *str, int c, size_t n)$/;"	f	language:C
+ft_putchar	srcs/ft_putchar.c	/^void	ft_putchar(char c)$/;"	f	language:C
+ft_putchar_fd	srcs/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/;"	f	language:C
+ft_putendl	srcs/ft_putendl.c	/^void	ft_putendl(char const *s)$/;"	f	language:C
+ft_putendl_fd	srcs/ft_putendl_fd.c	/^void	ft_putendl_fd(char const *s, int fd)$/;"	f	language:C
+ft_putnbr	srcs/ft_putnbr.c	/^void	ft_putnbr(int n)$/;"	f	language:C
+ft_putnbr_fd	srcs/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/;"	f	language:C
+ft_putstr	srcs/ft_putstr.c	/^void	ft_putstr(char const *str)$/;"	f	language:C
+ft_putstr_fd	srcs/ft_putstr_fd.c	/^void	ft_putstr_fd(char const *s, int fd)$/;"	f	language:C
+ft_realloc	srcs/ft_realloc.c	/^void	*ft_realloc(void *ptr, size_t size_src, size_t size)$/;"	f	language:C
+ft_strcat	srcs/ft_strcat.c	/^char	*ft_strcat(char *s1, char *s2)$/;"	f	language:C
+ft_strchr	srcs/ft_strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f	language:C
+ft_strclr	srcs/ft_strclr.c	/^void	ft_strclr(char *s)$/;"	f	language:C
+ft_strcmp	srcs/ft_strcmp.c	/^int	ft_strcmp(char const *s1, char const *s2)$/;"	f	language:C
+ft_strcpy	srcs/ft_strcpy.c	/^char	*ft_strcpy(char *s1, char const *s2)$/;"	f	language:C
+ft_strdel	srcs/ft_strdel.c	/^void	ft_strdel(char **as)$/;"	f	language:C
+ft_strdup	srcs/ft_strdup.c	/^char	*ft_strdup(const char *s)$/;"	f	language:C
+ft_strequ	srcs/ft_strequ.c	/^int	ft_strequ(char const *s1, char const *s2)$/;"	f	language:C
+ft_striter	srcs/ft_striter.c	/^void	ft_striter(char *s, void (*f)(char *))$/;"	f	language:C
+ft_striteri	srcs/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char *))$/;"	f	language:C
+ft_strjoin	srcs/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f	language:C
+ft_strlcat	srcs/ft_strlcat.c	/^size_t	ft_strlcat(char *s1, char *s2, size_t size)$/;"	f	language:C
+ft_strlen	srcs/ft_strlen.c	/^size_t	ft_strlen(const char *str)$/;"	f	language:C
+ft_strmap	srcs/ft_strmap.c	/^char	*ft_strmap(char const *s, char (*f)(char))$/;"	f	language:C
+ft_strmapi	srcs/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f	language:C
+ft_strncat	srcs/ft_strncat.c	/^char	*ft_strncat(char *s1, char *s2, size_t n)$/;"	f	language:C
+ft_strncmp	srcs/ft_strncmp.c	/^int	ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f	language:C
+ft_strncpy	srcs/ft_strncpy.c	/^char	*ft_strncpy(char *s1, char *s2, size_t len)$/;"	f	language:C
+ft_strnequ	srcs/ft_strnequ.c	/^int	ft_strnequ(char const *s1, char const *s2, size_t n)$/;"	f	language:C
+ft_strnew	srcs/ft_strnew.c	/^char	*ft_strnew(size_t size)$/;"	f	language:C
+ft_strnstr	srcs/ft_strnstr.c	/^char	*ft_strnstr(const char *s1, const char *s2, size_t len)$/;"	f	language:C
+ft_strrchr	srcs/ft_strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/;"	f	language:C
+ft_strsplit	srcs/ft_strsplit.c	/^char		**ft_strsplit(char const *s, char c)$/;"	f	language:C
+ft_strsrch	srcs/ft_strsrch.c	/^ssize_t	ft_strsrch(const char *str, char c)$/;"	f
+ft_strstr	srcs/ft_strstr.c	/^char	*ft_strstr(const char *s1, const char *s2)$/;"	f	language:C
+ft_strsub	srcs/ft_strsub.c	/^char	*ft_strsub(char const *s, unsigned int start, size_t len)$/;"	f	language:C
+ft_strtrim	srcs/ft_strtrim.c	/^char	*ft_strtrim(char const *s)$/;"	f	language:C
+ft_tolower	srcs/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f	language:C
+ft_toupper	srcs/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f	language:C
+get_next_line	libft/srcs/get_next_line.c	/^int				get_next_line(const int fd, char **line)$/;"	f
+get_rest	libft/srcs/get_next_line.c	/^static int		get_rest(int fd, char **line, t_list **head)$/;"	f	file:
+main	main.c	/^int main()$/;"	f	language:C
+next	includes/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
+read_line	libft/srcs/get_next_line.c	/^static ssize_t	read_line(int fd, ssize_t f, char **line, size_t size)$/;"	f	file:
+read_more	libft/srcs/get_next_line.c	/^static int		read_more(int fd, char **line, t_list **head)$/;"	f	file:
+s_list	includes/libft.h	/^typedef	struct		s_list$/;"	s
+t_list	includes/libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list
