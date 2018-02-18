@@ -6,7 +6,7 @@
 /*   By: ptyshevs <ptyshevs@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/17 14:36:08 by inovykov          #+#    #+#             */
-/*   Updated: 2018/02/18 12:25:17 by ptyshevs         ###   ########.fr       */
+/*   Updated: 2018/02/18 15:51:29 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 t_bool	is_numeric(char *str)
 {
+	if (!str || !*str)
+		return (FALSE);
 	while (*str)
 	{
-		if (!(*str >= '0' && *str <= '9'))
+		if (*str < '0' || *str > '9')
 			return (FALSE);
 		str++;
 	}
@@ -31,11 +33,12 @@ t_bool	is_numeric(char *str)
 ** @param outcome Whether our bot should win or lose on current line
 */
 
-void	fill_stack(t_line **head, int amount)
+int		fill_stack(t_line **head, int amount)
 {
 	t_line	*node;
 
-	node = (t_line *)malloc(sizeof(t_line));
+	if (!(node = (t_line *)malloc(sizeof(t_line))))
+		return (0);
 	node->amount = amount;
 	node->next = *head;
 	if (!*head)
@@ -50,55 +53,41 @@ void	fill_stack(t_line **head, int amount)
 	node->player = (t_players)(((node->outcome && (amount - 1) % 4)) ||
 								(!node->outcome && (amount % 4)));
 	*head = node;
+	return (1);
+}
+
+int		read_input(int fd, t_line **head)
+{
+	int			amount;
+	char		*line;
+
+	line = NULL;
+	while (get_next_line(fd, &line) == 1 && is_numeric(line))
+	{
+		amount = ft_atoi(line);
+		free(line);
+		if (amount < 1 || amount > 10000 || !fill_stack(head, amount))
+			return (0);
+	}
+	amount = *head && (!line || (!fd && !*line));
+	free(line);
+	return (amount);
 }
 
 /*
 ** Main function
 */
 
-int		gnl_free(const int fd, char **line)
-{
-	ft_strdel(line);
-	return (get_next_line(fd, line));
-}
-
-int		read_input(int fd, t_line **head, char **line)
-{
-	static int	count = 0;
-	int			amount;
-
-	while ((gnl_free(fd, line)) > 0 && (count += ft_strlen(*line) > 0))
-	{
-		if (!*line || !is_numeric(*line) || !(amount = ft_atoi(*line)))
-			break ;
-		else
-		{
-			if (amount >= 1 && amount <= 10000)
-				fill_stack(head, amount);
-			else if (fd && gnl_free(fd, line) == 0)
-				return (1);
-			else
-				break ;
-		}
-	}
-	if (*line && ((ft_strlen(*line) == 0 && !count && !fd) || (fd && count)))
-		return (0);
-	return (1);
-}
-
 int		main(int ac, char **av)
 {
 	int		fd;
 	t_line	*head;
 	t_line	*tmp;
-	char	*line;
 
 	head = NULL;
-	line = NULL;
 	fd = ac == 1 ? 0 : open(av[1], O_RDONLY);
-	if (fd == -1 || read_input(fd, &head, &line) == 0)
+	if (read_input(fd, &head) == 0)
 	{
-		ft_strdel(&line);
 		while (head)
 		{
 			tmp = head;
@@ -109,8 +98,7 @@ int		main(int ac, char **av)
 		write(2, "ERROR\n", 6);
 		return (1);
 	}
-	ft_strdel(&line);
 	game(head);
-	ft_putendl("Bot won. again. You really suck. Try harder next time");
+	ft_putendl("I won. Now I understand what Marvin feels");
 	return (0);
 }

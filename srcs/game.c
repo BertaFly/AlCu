@@ -6,7 +6,7 @@
 /*   By: astadnik <astadnik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/17 16:10:53 by astadnik          #+#    #+#             */
-/*   Updated: 2018/02/17 18:22:41 by ptyshevs         ###   ########.fr       */
+/*   Updated: 2018/02/18 17:18:09 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ static void	print_board(t_line *head)
 static void	my_turn(t_line *head)
 {
 	int		my_move;
-	char	*my_move_str;
 
 	if (head->outcome == WIN)
 	{
@@ -43,9 +42,9 @@ static void	my_turn(t_line *head)
 		my_move = head->amount % 4;
 		head->amount -= my_move;
 	}
-	my_move_str = ft_itoa(my_move);
-	ft_putendl(my_move_str);
-	free(my_move_str);
+	ft_putnbr(my_move);
+	ft_putendl("");
+	write(1, "===============================\n", 32);
 }
 
 static void	input(t_line *head)
@@ -78,7 +77,7 @@ static void	play(t_line *head)
 	{
 		print_board(head);
 		write(1, "===============================\n", 32);
-		write(1, "MY TURN: ", 9);
+		write(1, "MY TURN: \n", 9);
 		my_turn(head);
 	}
 	while (head->amount)
